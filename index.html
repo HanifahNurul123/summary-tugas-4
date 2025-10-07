@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Version Control System Summary</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Version Control System</h1>
+    </header>
+
+    <!-- === RINGKASAN MODUL (ditambahkan dari file modul) === -->
+    <section id="module-summary">
+        <h3>Apa itu Version Control System (VCS)?</h3>
+        <p>
+            Version Control System (VCS) adalah sistem untuk mengelola perubahan pada dokumen atau kode dari waktu ke
+            waktu.
+            Karena perubahan direkam, kita dapat kembali ke versi sebelumnya, melacak siapa yang melakukan perubahan,
+            dan bekerja kolaboratif tanpa saling menimpa pekerjaan. 
+        </p>
+
+        <h3>Tipe VCS</h3>
+        <ul>
+            <li><strong>Local VCS</strong> — metode sederhana seperti menyalin folder rawan kesalahan.</li>
+            <li><strong>Centralized VCS</strong> — satu server pusat menyimpan seluruh versi (kekurangan: single point
+                of failure). </li>
+            <li><strong>Distributed VCS (DVCS)</strong> — setiap klien mengkloning seluruh repositori (riwayat lengkap),
+                sehingga setiap klon merupakan cadangan penuh. </li>
+        </ul>
+
+        <h3>Git — gambaran singkat</h3>
+        <p>
+            Git adalah DVCS yang banyak dipakai untuk mengontrol versi source code. Ada tiga keadaan utama file di Git:
+        <ol>
+            <li><strong>modified</strong> — file berubah tetapi belum dipersiapkan untuk commit;</li>
+            <li><strong>staging</strong> — file telah ditandai (git add) untuk dicatat pada commit berikutnya;</li>
+            <li><strong>committed</strong> — perubahan telah tersimpan di database lokal.</li>
+        </ol>
+        </p>
+
+        <h3>Perintah dasar Git (ringkas)</h3>
+        <pre>
+git init                    # inisialisasi repository lokal
+git add .                   # tambahkan perubahan ke staging area
+git commit -m ""            # simpan snapshot ke history lokal
+git branch -a               # lihat branch
+git checkout                # buat & pindah ke branch baru
+git merge                   # gabungkan branch
+git remote -v               # memeriksa repositori jarak jauh yang terhubung 
+git push                    # kirim ke remote
+git pull                    # ambil & gabungkan dari remote
+git fetch                   # ambil update tanpa merge otomatis
+    </pre>
+
+        <h3>GitHub — platform kolaborasi</h3>
+        <p>
+            GitHub mempermudah kolaborasi: hosting repo, kontrol akses, issue tracking, PR (pull request), CI/CD, dan
+            wiki.
+            Alur kontribusi umum (jika tidak memiliki akses push langsung): Fork → Clone → Buat branch → Edit → Push ke
+            fork → Buat Pull Request ke repo asli. 
+        </p>
+
+        <h3>Fork, upstream, dan Pull Request (alur)</h3>
+        <ol>
+            <li>Fork repo asli ke akun GitHub kamu.</li>
+            <li>Clone fork ke lokal (`git clone <fork-url>`).</li>
+            <li>Tambahkan remote upstream (`git remote add upstream <original-url>`) untuk sinkronisasi.</li>
+            <li>Buat branch baru untuk perubahan (`git checkout -b nama-branch`).</li>
+            <li>Edit file (mis. `index.html`), commit, push ke fork (`git push origin nama-branch`).</li>
+            <li>Buka fork di GitHub → klik "Compare & pull request" → isi judul & deskripsi → Create pull request.</li>
+        </ol>
+
+        <h3>GitHub Pages (publikasi halaman)</h3>
+        <p>
+            GitHub Pages memungkinkan mempublikasikan halaman web langsung dari repo. Langkah aktivasi:
+            Settings → Pages → Source: Branch main (root) → Save. Biasanya beberapa menit kemudian muncul link `https://
+            <username>.github.io/<repo>/`. 
+        </p>
+    </section>
+   
+    
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>Dokumen dan ringkasan diambil dari modul pembelajaran Version Control System.</p>
+    </footer>
+</body>
+
+</html>
